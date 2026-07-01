@@ -1,0 +1,3 @@
+#SLTK: Sea Level Tool Kit
+SLTK is a Python library designed to monitor and analyze sea level data from PSMSL (Permanent Service for Mean Sea Level) tide gauge stations. The library organizes records from multiple stations into a datacube-style structure (time × station), enabling trend detection, seasonal pattern analysis, and comparison across locations.
+Future extensions could include support for CMEMS gridded satellite data. Anyone interested in developing this direction is welcome to build on the existing functions, adapting the CMEMS data format to match the structure used for PSMSL data in this library.
