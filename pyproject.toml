@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sltk"
+version = "0.1.0"
+description = "Sea Level Tool Kit: a Python library for monitoring and analyzing sea level data from PSMSL tide gauge stations"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "geopandas",
+    "shapely",
+    "scipy",
+    "matplotlib",
+]
+
+[tool.setuptools.packages.find]
+include = ["sltk*"]
