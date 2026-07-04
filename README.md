@@ -53,10 +53,6 @@ Trieste has an exceptionally long record (1875–2024) and is used separately as
 
 ## Installation
 
-Clone the repository and install the package (editable mode is recommended during development):
-
-## Installation
-
 ### 1. Clone the repository
 
 \```bash
@@ -93,6 +89,7 @@ This installs SLTK in editable mode, along with all required dependencies (`pand
 
 \```bash
 python -c "from sltk.loader import load_station_series; print('SLTK installed correctly')"
+\```tly')"
 \```
 
 Dependencies (see `pyproject.toml` / `requirements.txt`): `pandas`, `numpy`, `geopandas`, `shapely`, `scipy`, `matplotlib`.
