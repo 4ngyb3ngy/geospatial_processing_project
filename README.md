@@ -94,6 +94,19 @@ Dependencies (see `pyproject.toml` / `requirements.txt`): `pandas`, `numpy`, `ge
 
 ## Quick usage example
 
+The easiest way to try the library is to run the example notebook included in this repository, from the repository root, with the `sltk` environment active:
+
+```bash
+conda activate sltk
+pip install jupyter ipykernel
+python -m ipykernel install --user --name=sltk --display-name "Python (sltk)"
+jupyter notebook notebooks/example_usage.ipynb
+```
+
+When the notebook opens, make sure the **"Python (sltk)"** kernel is selected (top right corner), then run all cells.
+
+Alternatively, here is the core workflow as a standalone script. Save it as a `.py` file **inside the repository root** (so that the relative paths to `data/` resolve correctly), and run it with the `sltk` environment active:
+
 ```python
 import sltk
 
@@ -116,6 +129,7 @@ station_ids = [154, 2098, 2075, 2095, 2142, 2093, 2090]
 comparison = sltk.compare_stations(loader_metadata, station_ids, data_dir="data/stations")
 ```
 
+> **Note:** if you are using an IDE like VS Code, make sure it is using the `sltk` Python interpreter/environment (Command Palette → "Python: Select Interpreter"), and that your script is located inside the repository root — otherwise the relative paths to `data/` will not resolve.
 ## Testing
 
 Unit tests are provided under `tests/`, covering all modules of the library (loading, metadata, analysis, geometry, distances, and comparison). Run them with:
