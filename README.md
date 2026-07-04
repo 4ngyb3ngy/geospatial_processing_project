@@ -95,11 +95,7 @@ Dependencies (see `pyproject.toml` / `requirements.txt`): `pandas`, `numpy`, `ge
 ## Quick usage example
 
 ```python
-from sltk.loader import load_station_series
-from sltk.loader_metadata import StationLoader
-from sltk.analysis import SeaLevelAnalysis
-from sltk.distances import Distances
-from sltk.compare import compare_stations
+import sltk
 
 # Load a single station's cleaned time series
 trieste = load_station_series("data/stations/154.rlrdata.txt")
