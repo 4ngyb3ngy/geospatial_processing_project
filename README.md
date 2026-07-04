@@ -55,43 +55,41 @@ Trieste has an exceptionally long record (1875–2024) and is used separately as
 
 ### 1. Clone the repository
 
-\```bash
+```bash
 git clone <repository-url>
 cd sltk
-\```
+```
 
 ### 2. Create a virtual environment (recommended)
 
 Using **conda**:
-\```bash
+```bash
 conda create -n sltk python=3.10
 conda activate sltk
-\```
+```
 
 Or using Python's built-in **venv**:
-\```bash
+```bash
 python -m venv venv
 # macOS/Linux:
 source venv/bin/activate
 # Windows:
 venv\Scripts\activate
-\```
+```
 
 ### 3. Install the library
 
-\```bash
+```bash
 pip install -e .
-\```
+```
 
 This installs SLTK in editable mode, along with all required dependencies (`pandas`, `numpy`, `geopandas`, `shapely`, `scipy`, `matplotlib`).
 
 ### 4. Verify the installation
 
-\```bash
-python -c "from sltk.loader import load_station_series; print('SLTK installed correctly')"
-\```tly')"
-\```
-
+```bash
+python -c "import sltk; print('SLTK installed correctly')"
+```
 Dependencies (see `pyproject.toml` / `requirements.txt`): `pandas`, `numpy`, `geopandas`, `shapely`, `scipy`, `matplotlib`.
 
 ## Quick usage example
