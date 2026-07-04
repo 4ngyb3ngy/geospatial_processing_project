@@ -56,7 +56,7 @@ Trieste has an exceptionally long record (1875–2024) and is used separately as
 Clone the repository and install the package (editable mode is recommended during development):
 
 ```bash
-git clone <repository-url>
+git clone <(https://github.com/4ngyb3ngy/geospatial_processing_project.git)>
 cd sltk
 pip install -e .
 ```
