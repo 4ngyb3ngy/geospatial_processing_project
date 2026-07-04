@@ -100,7 +100,7 @@ The easiest way to try the library is to run the example notebook included in th
 conda activate sltk
 pip install jupyter ipykernel
 python -m ipykernel install --user --name=sltk --display-name "Python (sltk)"
-jupyter notebook notebooks/example_usage.ipynb
+jupyter notebook notebook/example_usage.ipynb
 ```
 
 When the notebook opens, make sure the **"Python (sltk)"** kernel is selected (top right corner), then run all cells.
