@@ -56,8 +56,8 @@ Trieste has an exceptionally long record (1875–2024) and is used separately as
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd sltk
+git clone https://github.com/4ngyb3ngy/geospatial_processing_project.git
+cd geospatial_processing_project
 ```
 
 ### 2. Create a virtual environment (recommended)
