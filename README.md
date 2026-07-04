@@ -55,11 +55,45 @@ Trieste has an exceptionally long record (1875–2024) and is used separately as
 
 Clone the repository and install the package (editable mode is recommended during development):
 
-```bash
-git clone https://github.com/4ngyb3ngy/geospatial_processing_project.git
+## Installation
+
+### 1. Clone the repository
+
+\```bash
+git clone <repository-url>
 cd sltk
+\```
+
+### 2. Create a virtual environment (recommended)
+
+Using **conda**:
+\```bash
+conda create -n sltk python=3.10
+conda activate sltk
+\```
+
+Or using Python's built-in **venv**:
+\```bash
+python -m venv venv
+# macOS/Linux:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
+\```
+
+### 3. Install the library
+
+\```bash
 pip install -e .
-```
+\```
+
+This installs SLTK in editable mode, along with all required dependencies (`pandas`, `numpy`, `geopandas`, `shapely`, `scipy`, `matplotlib`).
+
+### 4. Verify the installation
+
+\```bash
+python -c "from sltk.loader import load_station_series; print('SLTK installed correctly')"
+\```
 
 Dependencies (see `pyproject.toml` / `requirements.txt`): `pandas`, `numpy`, `geopandas`, `shapely`, `scipy`, `matplotlib`.
 
