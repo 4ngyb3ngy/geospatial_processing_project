@@ -98,22 +98,22 @@ Dependencies (see `pyproject.toml` / `requirements.txt`): `pandas`, `numpy`, `ge
 import sltk
 
 # Load a single station's cleaned time series
-trieste = load_station_series("data/stations/154.rlrdata.txt")
+trieste = sltk.load_station_series("data/stations/154.rlrdata.txt")
 
 # Compute its long-term trend and seasonal cycle
-analysis = SeaLevelAnalysis(trieste["sea_level_mm"])
+analysis = sltk.SeaLevelAnalysis(trieste["sea_level_mm"])
 trend = analysis.compute_trend()
 seasonal = analysis.seasonal_cycle()
 print(trend)  # {'trend_mm_per_year': 1.35, 'r_squared': 0.29, 'p_value': 4e-124}
 
 # Load station metadata and find the nearest stations to Trieste
-loader_metadata = StationLoader("data/metadata_stations.csv")
-dist = Distances(loader_metadata.metadata, id_col="ID")
+loader_metadata = sltk.StationLoader("data/metadata_stations.csv")
+dist = sltk.Distances(loader_metadata.metadata, id_col="ID")
 nearest = dist.nearest(station_id=154, n=3, method="geodetic")
 
 # Compare trends across multiple stations, with their spatial location
 station_ids = [154, 2098, 2075, 2095, 2142, 2093, 2090]
-comparison = compare_stations(loader_metadata, station_ids, data_dir="data/stations")
+comparison = sltk.compare_stations(loader_metadata, station_ids, data_dir="data/stations")
 ```
 
 ## Testing
